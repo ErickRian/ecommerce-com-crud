@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+main form {
+    width: 100%;
+}
+main legend {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1.8px;
+}
+.containerLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: none;
+}
+
+.containerLogin input {
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #0C4271;
+    color: #0c0c0c9a;
+    padding-left: 30px;
+}
+.passwordField {
+    border: 1px solid #0C4271;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+.passwordField input {
+    border: none;
+    padding: 0px;
+}
+.material-symbols-outlined {
+    cursor: pointer;
+}
+.containerLogin input[type="submit"] {
+    background-color: #0C4271;
+    color: #DDDDDD;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1.7px;
+    padding: 0px;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.containerLogin input[type="submit"]:hover {
+    background-color: black;
+}
