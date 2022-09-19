@@ -162,8 +162,6 @@ button:hover {
 }
 
 .display-name {
-    width: 130px;
-    height: 50px;
     font-size: 0.9rem;
     margin: 5px 10px 0 10px;
     color: var(--name);
@@ -266,23 +264,25 @@ button:hover {
 .feed article {
     display: grid;
     position: relative;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr;
-    width: 440px;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 0.5fr 2fr;
+    grid-template-areas: "img price"
+                         "img description";
     box-shadow: 0 2px 5px var(--shadow);
     border-radius: 5px;
     background-color: var(--firstcolor);
 }
 
 .feed .display-item {
-    grid-row: 1 / 3;
+    grid-area: img;
     width: 200px;
     height: 200px;
     border-radius: 5px 0 0 5px;
 }
 
 .feed .display-price {
-    grid-column: 2 / 3;
+    grid-area: price;
+    height: 100%;
 }
 
 .feed .display-price h3 {
@@ -294,8 +294,7 @@ button:hover {
 }
 
 .feed .display-name {
-    width: 220px;
-    height: 100px;
+    grid-area: description;
     font-size: 1.1rem;
 
 }
