@@ -9,7 +9,7 @@
     <title>Login</title>
 </head>
 <body>
-    <main>
+    <main class="mainLogin">
         <form action="" class="formLogin">
             <fieldset class="containerLogin">
                 <legend>LOGIN</legend>
@@ -45,6 +45,6 @@
         </form>
     </main>
 
-    <script src="script.js"></script>
+    <script src="scripts/login.js"></script>
 </body>
 </html>
