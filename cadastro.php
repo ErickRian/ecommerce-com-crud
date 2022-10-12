@@ -20,26 +20,26 @@
             <fieldset class="containerLogin">
                 <legend>Não é cadastrado? Faça agora!</legend>
                 <div>
-                    <input type="text" placeholder="Seu Nome">
-                    <input type="text" placeholder="Seu Email">
+                    <input type="text" placeholder="Seu Nome" name="nome" required>
+                    <input type="email" placeholder="Seu Email" name="email" required>
                 </div>
-                <input type="text" placeholder="Sua Senha">
+                <input type="password" placeholder="Sua Senha" name="senha" required>
                 <div>
-                    <input type="text" placeholder="Telefone">
-                    <input type="text" placeholder="CPF">
+                    <input type="tel" placeholder="Telefone" name="telefone" required max="11">
+                    <input type="int" placeholder="CPF" name="cpf" required max="11">
                 </div>
 
                 <hr>
 
-                <input type="text" placeholder="CEP">
+                <input type="int" placeholder="CEP" name="cep" required max="8">
                 <div>
-                    <input type="text" placeholder="Cidade">
-                    <input type="text" placeholder="Estado">
+                    <input type="text" placeholder="Cidade" name="cidade" required>
+                    <input type="text" placeholder="Estado" name="estado" required>
                 </div>
-                <input type="text" placeholder="Bairro">
+                <input type="text" placeholder="Bairro" name="bairro" required>
                 <div>
-                    <input type="text" placeholder="Rua">
-                    <input type="text" placeholder="Número">
+                    <input type="text" placeholder="Rua" name="rua" required>
+                    <input type="int" placeholder="Número" name="numero" required>
                 </div>
                 <input type="submit" value="Cadastrar">
             </fieldset>
