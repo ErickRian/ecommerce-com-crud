@@ -1,0 +1,80 @@
+.mainLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+}
+.mainLogin legend {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1.8px;
+    text-align: center;
+    align-self: center;
+}
+
+.formLogin {
+    background-color: var(--background);
+    padding: 40px 60px;
+    border-radius: 32px;
+}
+
+.containerLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 0px 10px 0px;
+    border: none;
+    width: 90%;
+    justify-content: center;
+}
+.containerLogin div {
+    display: flex;
+    gap: 10px;
+}
+.containerLogin input {
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #0C4271;
+    color: #0c0c0c9a;
+    padding-left: 30px;
+}
+.passwordField {
+    border: 1px solid #0C4271;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    background-color: #fff;
+}
+.passwordField input {
+    border: none;
+    padding: 0px;
+}
+.material-symbols-outlined {
+    cursor: pointer;
+}
+.containerLogin input[type="submit"] {
+    background-color: #0C4271;
+    color: #DDDDDD;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1.7px;
+    padding: 0px;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.containerLogin input[type="submit"]:hover {
+    background-color: black;
+}
+
+@media (min-width: 769px) {
+    .mainLogin {
+        width: 50%;
+    }
+}

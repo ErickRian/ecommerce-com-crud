@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -28,135 +29,12 @@
         <h2>Destaques</h2>
         <div class="item-container">
             <button class="btn backward"><i class="fa-solid fa-angle-left"></i></button>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
+            
+            <?php 
+                for ($i=0; $i < 20; $i++) { 
+                    itemCard("R$$i", "PRODUTO $i", "O Incrível produto $i");
+                }
+            ?>
 
             <button class="btn forward"><i class="fa-solid fa-angle-right"></i></button>
         </div>
@@ -198,16 +76,19 @@
                     <a href="#">
                         <div class="feed">
                             <article>
-                                <div class="display-price">
-                                    <h3>R$0,00</h3>
-                                    <button><span class="material-symbols-outlined wish-list">
-                                            favorite</span></button>
-                                </div>
-                                <div class="display-item">
+                            <div class="display-item">
                                     <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star-half-stroke"></i></div>
                                 </div>
+                                <div class="display-price">
+                                    <h3>R$0,00</h3>
+                                    <button>
+                                        <span class="material-symbols-outlined wish-list">favorite</span>
+                                    </button>
+                                </div>
+
+                                
                                 <h3 class="display-name">Lorem ipsum dolor sit amet consectetur
                                     adipisicing.casncaosnasconascnacsonasconascoascnosc
                                 </h3>

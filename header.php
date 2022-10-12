@@ -5,7 +5,7 @@
                     <button id="close"><span class="material-symbols-outlined close">
                             close
                         </span></button>
-                    <a href="#">Conta</a>
+                    <a href="login.php">Conta</a>
                     <a href="#">Lista de Desejos</a>
                     <a href="#">Contato</a>
                     <a href="#">Políticas de Privacidade</a>

@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+main {
+    height: 80vh !important;
+    border-radius: 32px;
+}
+
+legend {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+hr {
+    height: 8px;
+    border-radius: 32px;
+    border: none;
+
+}
+
+input[type="submit"] {
+    
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 32px;
+    display: block;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+     
