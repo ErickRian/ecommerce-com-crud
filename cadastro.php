@@ -16,7 +16,7 @@
 </head>
 <body>
     <main class="mainLogin">
-        <form action="" class="formLogin">
+        <form action="./cadastrarcliente.php" method="post" class="formLogin">
             <fieldset class="containerLogin">
                 <legend>Não é cadastrado? Faça agora!</legend>
                 <div>

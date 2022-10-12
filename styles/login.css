@@ -11,7 +11,16 @@
     font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 1.4rem;
     letter-spacing: 1.8px;
+    text-align: center;
+    align-self: center;
 }
+
+.formLogin {
+    background-color: var(--background);
+    padding: 40px 60px;
+    border-radius: 32px;
+}
+
 .containerLogin {
     display: flex;
     flex-direction: column;
@@ -19,6 +28,7 @@
     padding: 0px 0px 10px 0px;
     border: none;
     width: 90%;
+    justify-content: center;
 }
 .containerLogin div {
     display: flex;
@@ -39,6 +49,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 30px;
+    background-color: #fff;
 }
 .passwordField input {
     border: none;
