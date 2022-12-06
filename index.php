@@ -1,4 +1,8 @@
+
 <!DOCTYPE html>
+<?php
+    session_start();
+?>
 <html lang="pt-br">
 
 <head>
@@ -15,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4155e89186.js" crossorigin="anonymous"></script>
+
     <title>E-Commerce</title>
 </head>
 
@@ -22,7 +27,8 @@
 
     <?php
     include_once "header.php";
-    include_once "components/itemCard.php"
+    include_once "components/itemCard.php";
+
     ?>
 
     <section>
@@ -307,6 +313,7 @@
                     2022 © Todos os Direitos Reservados
                 </div>
             </div>
+            <a href="?logout">sair</a>
         </nav>
     </footer>
     <script src="scripts/home.js"></script>
