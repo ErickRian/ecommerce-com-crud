@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,11 @@
     <?php
     include_once "header.php";
     include_once "components/itemCard.php";
+<<<<<<< HEAD
 
+=======
+    include_once "server/connection.php";
+>>>>>>> dynamic-products
     ?>
 
     <section>
@@ -36,9 +40,14 @@
         <div class="item-container">
             <button class="btn backward"><i class="fa-solid fa-angle-left"></i></button>
             
-            <?php 
-                for ($i=0; $i < 20; $i++) { 
-                    itemCard("R$$i", "PRODUTO $i", "O Incrível produto $i");
+            <?php
+
+                $query = $conn->query("SELECT nome, imagem, preco FROM produtos");
+                
+                if ($query->num_rows > 0) {
+                    while ($product = $query->fetch_assoc()) {
+                       itemCard("R$" . number_format($product["preco"], 2, ",", "."), "image/" . $product["imagem"], $product["nome"]);
+                    }
                 }
             ?>
 
@@ -50,235 +59,47 @@
                 <div class="category-container">
                     <a href="#">
                         <div class="category">
-
-                            <h3>Exemplo</h3>
+                            <h3>Processadores</h3>
                         </div>
                     </a>
                     <a href="#">
                         <div class="category">
 
-                            <h3>Exemplo</h3>
+                            <h3>Gabinetes</h3>
                         </div>
                     </a>
                     <a href="#">
                         <div class="category">
 
-                            <h3>Exemplo</h3>
+                            <h3>Monitores</h3>
                         </div>
                     </a>
                     <a href="#">
                         <div class="category">
 
-                            <h3>Exemplo</h3>
+                            <h3>GPU's</h3>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="responsive-feed">
-                <h2>Recomendados</h2>
-
-                <div class="feed-container">
-
-                    <a href="#">
-                        <div class="feed">
-                            <article>
-                            <div class="display-item">
-                                    <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star-half-stroke"></i></div>
-                                </div>
-                                <div class="display-price">
-                                    <h3>R$0,00</h3>
-                                    <button>
-                                        <span class="material-symbols-outlined wish-list">favorite</span>
-                                    </button>
-                                </div>
-
-                                
-                                <h3 class="display-name">Lorem ipsum dolor sit amet consectetur
-                                    adipisicing.casncaosnasconascnacsonasconascoascnosc
-                                </h3>
-                            </article>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="feed">
-                            <article>
-                                <div class="display-price">
-                                    <h3>R$0,00</h3>
-                                    <button><span class="material-symbols-outlined wish-list">
-                                            favorite</span></button>
-                                </div>
-                                <div class="display-item">
-                                    <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star-half-stroke"></i></div>
-                                </div>
-                                <h3 class="display-name">
-                            </article>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            
         </div>
 
         <h2>Promoções</h2>
         <div class="item-container">
             <button class="btn backward"><i class="fa-solid fa-angle-left"></i></button>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <h3 class="promocao">0% OFF</h3>
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <h3 class="promocao">0% OFF</h3>
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
+            
+            <?php
 
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <h3 class="promocao">0% OFF</h3>
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
+                $query = $conn->query("SELECT nome, imagem, preco FROM produtos where promocao=1");
+                
+                if ($query->num_rows > 0) {
+                    while ($product = $query->fetch_assoc()) {
+                       itemCard("R$" . number_format($product["preco"], 2, ",", "."), "image/" . $product["imagem"], $product["nome"]);
+                    }
+                }
+            ?>
 
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <h3 class="promocao">0% OFF</h3>
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <h3 class="promocao">0% OFF</h3>
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <h3 class="promocao">0% OFF</h3>
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <h3 class="promocao">0% OFF</h3>
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item">
-                    <article>
-                        <div class="display-price">
-                            <h3>R$0,00</h3>
-                            <button><span class="material-symbols-outlined wish-list">
-                                    favorite</span></button>
-                        </div>
-                        <div class="display-item">
-                            <h3 class="promocao">0% OFF</h3>
-                            <div class="rate"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star-half-stroke"></i></div>
-                        </div>
-                        <h3 class="display-name">Lorem ipsum dolor sit amet consectetur adipisicing
-                        </h3>
-                    </article>
-                </div>
-            </a>
             <button class="btn forward"><i class="fa-solid fa-angle-right"></i></button>
         </div>
 
