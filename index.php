@@ -28,11 +28,7 @@
     <?php
     include_once "header.php";
     include_once "components/itemCard.php";
-<<<<<<< HEAD
-
-=======
     include_once "server/connection.php";
->>>>>>> dynamic-products
     ?>
 
     <section>

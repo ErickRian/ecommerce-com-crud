@@ -16,7 +16,7 @@
 <body>
             
     <main class="mainLogin">
-        <form action="session.php" class="formLogin" method="POST">
+        <form action="./session.php" class="formLogin" method="post">
             <fieldset class="containerLogin">
                 <legend>LOGIN</legend>
                 <input type="email" placeholder="Digite seu Email" name="login">
@@ -25,7 +25,7 @@
                     <input type="password" placeholder="Digite sua Senha" id="passwordInput" name="senha"><span class="material-symbols-outlined" id="showPassword">visibility</span>
                 </div>
 
-                <input type="submit" value="Entrar" name="btn">
+                <input type="submit" value="Entrar">
             </fieldset>
         </form>
         <a href="cadastro.php">Não tem uma conta? Crie uma aqui!</a>

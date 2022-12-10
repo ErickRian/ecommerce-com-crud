@@ -1,19 +1,29 @@
 <?php
     session_start();
-    //conecxão
-    require_once 'server/connection.php';
+    include_once './server/connection.php';
     
-    //botão enviar
-        $login = $_POST['login'];
-        $senha = $_POST['senha'];
+    $login = $_POST["login"];
+    $senha = $_POST["senha"];
 
-        $sql = "SELECT email, senha FROM cadastro WHERE email = '$login' AND senha = '$senha'";
-        $result = mysqli_query($conn, $sql);
+    $query = $conn->prepare("SELECT email, senha FROM cadastro WHERE email=?");
+    $query->bind_param("s", $login);
 
-        if(mysqli_num_rows($result) == 1):
-            $_SESSION['logado'] = true;
-            header('location: index.php');
-        endif;       
+
+    if($query->execute()) {
+        $result = $query->get_result();
+        $data = $result->fetch_assoc();
+
+        if (password_verify($senha, $data["senha"])) {
+            $_SESSION["login"] = $login;
+            $_SESSION["password"] = $data["senha"];
+            header("location: perfil.php");
+        }
+        else {
+            unset ($_SESSION['login']);
+            unset ($_SESSION['senha']);
+        }
+        
+     }
     
 ?>     
     

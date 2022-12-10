@@ -25,8 +25,8 @@
                 </div>
                 <input type="password" placeholder="Sua Senha" name="senha" required>
                 <div>
-                    <input type="tel" placeholder="Telefone" name="telefone" required max="11">
-                    <input type="int" placeholder="CPF" name="cpf" required max="11">
+                    <input type="tel" id="tel" placeholder="Telefone" name="telefone" required minlength="11" maxlength="11">
+                    <input type="int" id="cpf" placeholder="CPF" name="cpf" required minlength="11" maxlength="11">
                 </div>
 
                 <hr>
@@ -41,9 +41,45 @@
                     <input type="text" placeholder="Rua" name="rua" required>
                     <input type="int" placeholder="Número" name="numero" required>
                 </div>
+                <div>
+                    <p class="informations-empty">
+                        <?php 
+                        if (isset($_GET["empty"])) {
+                            switch ($_GET["empty"]) {
+
+                                case "tel":
+                                    echo "Preencha o telefone com 11 dígitos";
+                                    break;
+                                
+                                case "cpf":
+                                    echo "Preencha o CPF com 11 dígitos";
+                                    break;
+
+                                default:
+                                    echo "Preencha todas as informações";
+                                    break;
+                            }
+                        }
+
+                        if (isset($_GET["already_exists"])) {
+                            switch ($_GET["already_exists"]) {
+                                case "cpf":
+                                    echo "CPF já cadastrado, tente outro CPF";
+                                    break;
+                                
+                                default:
+                                    echo "Email já cadastrado, tente outro email";
+                                    break;
+                            }
+                        }
+                        ?>
+                    </p>
+                </div>
                 <input type="submit" value="Cadastrar">
             </fieldset>
         </form>
     </main>
+
+    <script src="scripts/cadastro.js"></script>
 </body>
 </html>
