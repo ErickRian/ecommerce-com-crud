@@ -27,6 +27,11 @@
 
                 <input type="submit" value="Entrar">
             </fieldset>
+            <?php
+                if (isset($_GET["incorrect"])) {
+                    echo "Email ou senha incorretos";
+                }
+            ?>
         </form>
         <a href="cadastro.php">Não tem uma conta? Crie uma aqui!</a>
     </main>
