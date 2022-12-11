@@ -1,3 +1,7 @@
+<?php
+    include_once ('viacep.php');
+    $address = getAddress();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,15 +35,15 @@
 
                 <hr>
 
-                <input type="int" placeholder="CEP" name="cep" required max="8">
+                <input type="int" placeholder="CEP" name="cep" required max="8" value="<?php echo $address->cep?>">
                 <div>
-                    <input type="text" placeholder="Cidade" name="cidade" required>
-                    <input type="text" placeholder="Estado" name="estado" required>
+                    <input type="text" placeholder="Cidade" name="cidade" value="<?php echo $address->localidade?>">
+                    <input type="text" placeholder="Estado" name="estado" value="<?php echo $address->uf?>">
                 </div>
-                <input type="text" placeholder="Bairro" name="bairro" required>
+                <input type="text" placeholder="Bairro" name="bairro" value="<?php echo $address->bairro?>">
                 <div>
-                    <input type="text" placeholder="Rua" name="rua" required>
-                    <input type="int" placeholder="Número" name="numero" required>
+                    <input type="text" placeholder="Rua" name="rua" value="<?php echo $address->logradouro?>">
+                    <input type="int" placeholder="Número" name="numero">
                 </div>
                 <input type="submit" value="Cadastrar">
             </fieldset>
