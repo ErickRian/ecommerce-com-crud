@@ -15,3 +15,20 @@ function cpfFormat(cpf) {
 function telFormat(tel) {
     return tel.replace(/[^\d]/g, "").replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
 }
+
+const cepInput = document.getElementById("cep");
+
+const estado = document.getElementById("uf");
+const cidade = document.getElementById("cidade");
+const bairro = document.getElementById("bairro");
+const rua = document.getElementById("rua");
+
+cepInput.addEventListener("blur", async () => {
+    const req = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`);
+    const res = await req.json();
+
+    estado.value = res.uf;
+    cidade.value = res.localidade;
+    bairro.value = res.bairro;
+    rua.value = res.logradouro;
+});
