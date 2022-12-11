@@ -73,6 +73,19 @@
     background-color: black;
 }
 
+.lineInformation {
+    display: flex;
+    gap: 5px;
+}
+.profileContainer .field {
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
 @media (min-width: 769px) {
     .mainLogin {
         width: 50%;

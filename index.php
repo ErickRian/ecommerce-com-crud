@@ -49,37 +49,7 @@
 
             <button class="btn forward"><i class="fa-solid fa-angle-right"></i></button>
         </div>
-        <div class="responsive-grid">
-            <div class="responsive-category">
-                <h2>Categorias</h2>
-                <div class="category-container">
-                    <a href="#">
-                        <div class="category">
-                            <h3>Processadores</h3>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="category">
-
-                            <h3>Gabinetes</h3>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="category">
-
-                            <h3>Monitores</h3>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="category">
-
-                            <h3>GPU's</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
-        </div>
+        
 
         <h2>Promoções</h2>
         <div class="item-container">
@@ -130,7 +100,6 @@
                     2022 © Todos os Direitos Reservados
                 </div>
             </div>
-            <a href="?logout">sair</a>
         </nav>
     </footer>
     <script src="scripts/home.js"></script>

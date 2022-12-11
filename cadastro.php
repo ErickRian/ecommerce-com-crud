@@ -72,6 +72,10 @@
                                     break;
                             }
                         }
+
+                        if (isset($_GET["error"])) {
+                            echo "Houve um erro ao cadastrar sua conta, por favor, tente novamente mais tarde";
+                        }
                         ?>
                     </p>
                 </div>

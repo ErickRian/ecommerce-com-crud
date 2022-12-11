@@ -43,6 +43,9 @@
         	        else if (str_contains($query->error, "CPF")) {
         	            header("location: cadastro.php?already_exists=cpf");
         	        }
+                    else {
+                        header("location: cadastro.php?error=true");
+                    }
                 }
             }
             else {
